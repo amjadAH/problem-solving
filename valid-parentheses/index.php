@@ -1,12 +1,5 @@
 <?php
 
-/*
- * @lc app=leetcode id=20 lang=php
- *
- * [20] Valid Parentheses
- */
-
-// @lc code=start
 class Solution
 {
     private const PARENTHESES = [
@@ -14,11 +7,8 @@ class Solution
         '[' => ']',
         '{' => '}',
     ];
-    /**
-     * @param string $s
-     * @return bool
-     */
-    function isValid($s)
+
+    function isValid(string $s): bool
     {
         $s = str_split($s);
         $arr = [];
@@ -35,6 +25,3 @@ class Solution
         return count($arr) == 0;
     }
 }
-// @lc code=end
-
-var_dump((new Solution)->isValid('['));
